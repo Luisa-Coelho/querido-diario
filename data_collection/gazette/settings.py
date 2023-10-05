@@ -19,7 +19,7 @@ USER_AGENT = (
 
 DOWNLOAD_TIMEOUT = 360
 
-FILES_STORE = config("FILES_STORE", default="data")
+FILES_STORE = config("FILES_STORE", default="s3://queridodiariobucket/")
 MEDIA_ALLOW_REDIRECTS = True
 
 EXTENSIONS = {
@@ -43,17 +43,17 @@ SPIDERMON_DISCORD_WEBHOOK_URL = config(
 )
 
 QUERIDODIARIO_DATABASE_URL = config(
-    "QUERIDODIARIO_DATABASE_URL", default="sqlite:///querido-diario.db"
-)
+    "QUERIDODIARIO_DATABASE_URL", default="postgresql://queridodiario:queridodiario@127.0.0.1:5432/queridodiariodb"
+) 
 QUERIDODIARIO_MAX_REQUESTS_ITEMS_RATIO = 5
 QUERIDODIARIO_MAX_DAYS_WITHOUT_GAZETTES = 7
 
 # These settings are needed only when storing downloaded files
 # in a S3 bucket
-AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", default="")
-AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY", default="")
-AWS_ENDPOINT_URL = config("AWS_ENDPOINT_URL", default="")
-AWS_REGION_NAME = config("AWS_REGION_NAME", default="")
+AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID", default="minio-access-key")
+AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY", default="minio-secret-key")
+AWS_ENDPOINT_URL = config("AWS_ENDPOINT_URL", default="http://localhost:9000/")
+AWS_REGION_NAME = config("AWS_REGION_NAME", default="us-east-1")
 FILES_STORE_S3_ACL = config("FILES_STORE_S3_ACL", default="public-read")
 
 DOWNLOADER_MIDDLEWARES = {"scrapy_zyte_smartproxy.ZyteSmartProxyMiddleware": 610}
