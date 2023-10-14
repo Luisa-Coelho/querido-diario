@@ -1,0 +1,921 @@
+2023-09-20 19:27:14 [scrapy.utils.log] INFO: Scrapy 2.7.1 started (bot: gazette)
+2023-09-20 19:27:14 [scrapy.utils.log] INFO: Versions: lxml 4.9.2.0, libxml2 2.9.12, cssselect 1.2.0, parsel 1.7.0, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.10 (tags/v3.10.10:aad5f6a, Feb  7 2023, 17:20:36) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 22.1.0 (OpenSSL 3.0.7 1 Nov 2022), cryptography 38.0.4, Platform Windows-10-10.0.22621-SP0
+2023-09-20 19:27:14 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'gazette',
+ 'DOWNLOAD_TIMEOUT': 360,
+ 'FILES_STORE_S3_ACL': 'public-read',
+ 'LOG_FILE': 'log_ma_bacurituba.txt',
+ 'NEWSPIDER_MODULE': 'gazette.spiders',
+ 'SPIDER_MODULES': ['gazette.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) '
+               'Gecko/20100101 Firefox/108.0'}
+2023-09-20 19:27:14 [py.warnings] WARNING: C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\scrapy\utils\request.py:231: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+
+It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+
+See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+  return cls(crawler)
+
+2023-09-20 19:27:14 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2023-09-20 19:27:14 [scrapy.extensions.telnet] INFO: Telnet Password: c98f30a7e04485f4
+2023-09-20 19:27:15 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'spidermon.contrib.scrapy.extensions.Spidermon',
+ 'gazette.extensions.StatsPersist']
+2023-09-20 19:27:15 [al_associacao_municipios] INFO: Collecting gazettes from 2023-09-01
+2023-09-20 19:27:15 [al_associacao_municipios] INFO: Collecting all gazettes available until today
+2023-09-20 19:27:15 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy_zyte_smartproxy.ZyteSmartProxyMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-09-20 19:27:15 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from before-call.apigateway to before-call.api-gateway
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+2023-09-20 19:27:16 [botocore.loaders] DEBUG: Loading JSON file: C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\botocore\data\endpoints.json
+2023-09-20 19:27:16 [botocore.loaders] DEBUG: Loading JSON file: C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\botocore\data\sdk-default-configuration.json
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Event choose-service-name: calling handler <function handle_service_name_alias at 0x000001CD05FB92D0>
+2023-09-20 19:27:16 [botocore.loaders] DEBUG: Loading JSON file: C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\botocore\data\s3\2006-03-01\service-2.json
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Event creating-client-class.s3: calling handler <function add_generate_presigned_post at 0x000001CD05F41360>
+2023-09-20 19:27:16 [botocore.hooks] DEBUG: Event creating-client-class.s3: calling handler <function add_generate_presigned_url at 0x000001CD05F41120>
+2023-09-20 19:27:16 [botocore.endpoint] DEBUG: Setting s3 timeout as (60, 60)
+2023-09-20 19:27:16 [botocore.loaders] DEBUG: Loading JSON file: C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\botocore\data\_retry.json
+2023-09-20 19:27:16 [botocore.client] DEBUG: Registering retry handlers for service: s3
+2023-09-20 19:27:16 [scrapy.middleware] WARNING: Disabled ItemValidationPipeline: Invalid schema, jsonschemas must be defined as:
+- a python dict.
+- an object path to a python dict.
+- an object path to a JSON string.
+- a path to a JSON file.
+2023-09-20 19:27:16 [scrapy.middleware] INFO: Enabled item pipelines:
+['gazette.pipelines.GazetteDateFilteringPipeline',
+ 'gazette.pipelines.DefaultValuesPipeline',
+ 'gazette.pipelines.QueridoDiarioFilesPipeline',
+ 'gazette.pipelines.SQLDatabasePipeline']
+2023-09-20 19:27:16 [scrapy.core.engine] INFO: Spider opened
+2023-09-20 19:27:16 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-09-20 19:27:16 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-09-20 19:27:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET http://www.diariomunicipal.com.br/ama/> from <GET https://www.diariomunicipal.com.br/ama>
+2023-09-20 19:27:17 [scrapy.downloadermiddlewares.redirect] DEBUG: Redirecting (301) to <GET https://www.diariomunicipal.com.br/ama/> from <GET http://www.diariomunicipal.com.br/ama/>
+2023-09-20 19:27:19 [filelock] DEBUG: Attempting to acquire lock 1980091706112 on C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2023-09-20 19:27:19 [filelock] DEBUG: Lock 1980091706112 acquired on C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2023-09-20 19:27:19 [filelock] DEBUG: Attempting to release lock 1980091706112 on C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2023-09-20 19:27:19 [filelock] DEBUG: Lock 1980091706112 released on C:\Users\User\OneDrive\Documentos\FIOCRUZ\2023\QD\querido-diario\.newvenv\lib\site-packages\tldextract\.suffix_cache/publicsuffix.org-tlds\de84b5ca2167d4c83e38fb162f2e8738.tldextract.json.lock
+2023-09-20 19:27:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.diariomunicipal.com.br/ama/> (referer: None)
+2023-09-20 19:27:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:20 [al_associacao_municipios] DEBUG: Regular Gazette not available for 2023-09-02
+2023-09-20 19:27:20 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-02
+2023-09-20 19:27:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:20 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-20
+2023-09-20 19:27:20 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:20 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-03
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:20 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-20%5C2b05a8a189bfcaf11e285c4d6d9b9438478022c7.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-20%5C2b05a8a189bfcaf11e285c4d6d9b9438478022c7.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:20 [botocore.utils] DEBUG: Using S3 path style addressing.
+2023-09-20 19:27:20 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:20 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-20%5C2b05a8a189bfcaf11e285c4d6d9b9438478022c7.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222720Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:20 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222720Z
+20230920/us-east-1/s3/aws4_request
+081ec23a9f5eaa0855fa4bdccebf24084d0274ad770b7221cafab8ed63634d58
+2023-09-20 19:27:20 [botocore.auth] DEBUG: Signature:
+e5498e57809af6f6ca517286e14865a7679f303e0087954a79171e8f8049301c
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:20 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-20%5C2b05a8a189bfcaf11e285c4d6d9b9438478022c7.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222720Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=e5498e57809af6f6ca517286e14865a7679f303e0087954a79171e8f8049301c', 'amz-sdk-invocation-id': b'6a2d7d06-f601-458c-be06-12d91bdc86c6', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:20 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): localhost:9000
+2023-09-20 19:27:20 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-20%5C2b05a8a189bfcaf11e285c4d6d9b9438478022c7.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:20 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1394619', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"b2875bd48e0dbed6720f30837dbf89f7"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:48 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD6CC33B424', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:20 GMT'}
+2023-09-20 19:27:20 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:20 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:20 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:20 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91271_2023-09-19_6301c11805ba7fee5559baa4c7b9436b.pdf> referred in <None>
+2023-09-20 19:27:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 20),
+ 'edition_number': '2137',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91271_2023-09-19_6301c11805ba7fee5559baa4c7b9436b.pdf'],
+ 'files': [{'checksum': 'b2875bd48e0dbed6720f30837dbf89f7',
+            'path': '2700000\\2023-09-20\\2b05a8a189bfcaf11e285c4d6d9b9438478022c7.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91271_2023-09-19_6301c11805ba7fee5559baa4c7b9436b.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 20, 946493),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:21 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:21 [al_associacao_municipios] DEBUG: Regular Gazette not available for 2023-09-03
+2023-09-20 19:27:21 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:21 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:21 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:21 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-01%5C92541d31409b283e58be20cdcd5f1891de809de9.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-01%5C92541d31409b283e58be20cdcd5f1891de809de9.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:21 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:21 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-01%5C92541d31409b283e58be20cdcd5f1891de809de9.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222721Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:21 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222721Z
+20230920/us-east-1/s3/aws4_request
+36043f524498fef05db7629c1e15c6b2546986c39b75b2f7fea41c48b028f38a
+2023-09-20 19:27:21 [botocore.auth] DEBUG: Signature:
+62931c863028b73fffd6d99cefd6c368c669426a8321c09c6c1526852776d645
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:21 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-01%5C92541d31409b283e58be20cdcd5f1891de809de9.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222721Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=62931c863028b73fffd6d99cefd6c368c669426a8321c09c6c1526852776d645', 'amz-sdk-invocation-id': b'acdfacad-c997-44e4-9d75-07a382452b28', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:21 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-01%5C92541d31409b283e58be20cdcd5f1891de809de9.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:21 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1966447', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"5a01f16b9548180949cc1b4c5510f17c"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:46 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD6EA3A4ACA', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:21 GMT'}
+2023-09-20 19:27:21 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:21 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91259_2023-08-31_1c0e6a6be6b1cc241ff28e3995d01adf.pdf> referred in <None>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:21 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-19%5C521bf118c61d7449802138aebb76a692d4120b8c.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-19%5C521bf118c61d7449802138aebb76a692d4120b8c.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:21 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:21 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-19%5C521bf118c61d7449802138aebb76a692d4120b8c.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222721Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:21 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222721Z
+20230920/us-east-1/s3/aws4_request
+1a2a01063a05fa7e16b7f5a0d632d69f511f2c750f56be9f5f1e702d9a1919a5
+2023-09-20 19:27:21 [botocore.auth] DEBUG: Signature:
+cce36ca3f8643762cb436ba4bf6e6d161607a1cc6cb89c62297cf3c80db91d87
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:21 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-19%5C521bf118c61d7449802138aebb76a692d4120b8c.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222721Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=cce36ca3f8643762cb436ba4bf6e6d161607a1cc6cb89c62297cf3c80db91d87', 'amz-sdk-invocation-id': b'277fa157-423b-4d01-b0ff-ae3d32fc2cc5', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:21 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-19%5C521bf118c61d7449802138aebb76a692d4120b8c.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:21 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1815587', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"530cbe56c13e3fe0a9cfe5b7721addd3"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:48 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD6EC57CD1C', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:21 GMT'}
+2023-09-20 19:27:21 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:21 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91270_2023-09-18_13b10a813f9355eeb5bfa821975e03ad.pdf> referred in <None>
+2023-09-20 19:27:21 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-19
+2023-09-20 19:27:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 1),
+ 'edition_number': '2125',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91259_2023-08-31_1c0e6a6be6b1cc241ff28e3995d01adf.pdf'],
+ 'files': [{'checksum': '5a01f16b9548180949cc1b4c5510f17c',
+            'path': '2700000\\2023-09-01\\92541d31409b283e58be20cdcd5f1891de809de9.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91259_2023-08-31_1c0e6a6be6b1cc241ff28e3995d01adf.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 21, 467917),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:21 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 19),
+ 'edition_number': '2136',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91270_2023-09-18_13b10a813f9355eeb5bfa821975e03ad.pdf'],
+ 'files': [{'checksum': '530cbe56c13e3fe0a9cfe5b7721addd3',
+            'path': '2700000\\2023-09-19\\521bf118c61d7449802138aebb76a692d4120b8c.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91270_2023-09-18_13b10a813f9355eeb5bfa821975e03ad.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 21, 508023),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:21 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:21 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:21 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-17
+2023-09-20 19:27:21 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:21 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:21 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-01
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:21 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-18%5C053d0adf9433db7c4c8fe59a98998d2e8537db03.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-18%5C053d0adf9433db7c4c8fe59a98998d2e8537db03.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:21 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:21 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-18%5C053d0adf9433db7c4c8fe59a98998d2e8537db03.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222721Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:21 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222721Z
+20230920/us-east-1/s3/aws4_request
+9292ceb5136af563ecd3a8ebcbe6737165a47c77ec0164219f1f5a029f36aa27
+2023-09-20 19:27:21 [botocore.auth] DEBUG: Signature:
+ee18e08286f5e421dda85432c9eb6b77a9df288a33d4a57466ada1eb405109ab
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:21 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-18%5C053d0adf9433db7c4c8fe59a98998d2e8537db03.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222721Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=ee18e08286f5e421dda85432c9eb6b77a9df288a33d4a57466ada1eb405109ab', 'amz-sdk-invocation-id': b'f66b6d13-d8a9-4121-8437-3752dd0f77d5', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:21 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-18
+2023-09-20 19:27:21 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-18%5C053d0adf9433db7c4c8fe59a98998d2e8537db03.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:21 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1084958', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"9abab30960a2382d9da2d8235bd90b67"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:48 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD707D294A1', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:21 GMT'}
+2023-09-20 19:27:21 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:21 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:21 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:21 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91269_2023-09-15_e3b57783bad2e62c08e15f050f16e373.pdf> referred in <None>
+2023-09-20 19:27:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 18),
+ 'edition_number': '2135',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91269_2023-09-15_e3b57783bad2e62c08e15f050f16e373.pdf'],
+ 'files': [{'checksum': '9abab30960a2382d9da2d8235bd90b67',
+            'path': '2700000\\2023-09-18\\053d0adf9433db7c4c8fe59a98998d2e8537db03.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91269_2023-09-15_e3b57783bad2e62c08e15f050f16e373.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 21, 960473),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:22 [al_associacao_municipios] DEBUG: Regular Gazette not available for 2023-09-17
+2023-09-20 19:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:22 [al_associacao_municipios] DEBUG: Regular Gazette not available for 2023-09-16
+2023-09-20 19:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:22 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-16
+2023-09-20 19:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:22 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-15%5C47c871eaaf859fe362bc7bc91e9339249b1f6476.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-15%5C47c871eaaf859fe362bc7bc91e9339249b1f6476.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:22 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:22 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-15%5C47c871eaaf859fe362bc7bc91e9339249b1f6476.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222722Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:22 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222722Z
+20230920/us-east-1/s3/aws4_request
+c2057552dea1ff7c4daf80e8d1504c33719f5100c0fc04d40003636475c76b78
+2023-09-20 19:27:22 [botocore.auth] DEBUG: Signature:
+2ae33c3b9bf31433f446a981159df41694dbcc6dff338354510e1e1854a0c523
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:22 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-15%5C47c871eaaf859fe362bc7bc91e9339249b1f6476.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222722Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=2ae33c3b9bf31433f446a981159df41694dbcc6dff338354510e1e1854a0c523', 'amz-sdk-invocation-id': b'e44850ff-66f7-497e-8eaa-c9c6dd2956ed', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:22 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-15%5C47c871eaaf859fe362bc7bc91e9339249b1f6476.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:22 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1291261', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"eb315511a83d401e51de28835479720e"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:46 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD737941535', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:22 GMT'}
+2023-09-20 19:27:22 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:22 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:22 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91268_2023-09-14_c1f4caac68c4d5d314cb35c930407b64.pdf> referred in <None>
+2023-09-20 19:27:22 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-15
+2023-09-20 19:27:22 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:22 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-13
+2023-09-20 19:27:22 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 15),
+ 'edition_number': '2134',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91268_2023-09-14_c1f4caac68c4d5d314cb35c930407b64.pdf'],
+ 'files': [{'checksum': 'eb315511a83d401e51de28835479720e',
+            'path': '2700000\\2023-09-15\\47c871eaaf859fe362bc7bc91e9339249b1f6476.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91268_2023-09-14_c1f4caac68c4d5d314cb35c930407b64.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 22, 761258),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:22 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-14%5Cca70d53f3997a47060011807bf470a6c523b02b7.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-14%5Cca70d53f3997a47060011807bf470a6c523b02b7.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:22 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:22 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-14%5Cca70d53f3997a47060011807bf470a6c523b02b7.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222722Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:22 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222722Z
+20230920/us-east-1/s3/aws4_request
+c79eab4467b96ca09c41b1d4798811f04af1e8a989f90adcc4f730c8b62b2db1
+2023-09-20 19:27:22 [botocore.auth] DEBUG: Signature:
+8b8713bfb94ff3fe561cc97c56bd16d6d9f7c42158d815931b1fd29fee467d94
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:22 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-14%5Cca70d53f3997a47060011807bf470a6c523b02b7.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222722Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=8b8713bfb94ff3fe561cc97c56bd16d6d9f7c42158d815931b1fd29fee467d94', 'amz-sdk-invocation-id': b'e8977e7c-0281-4061-ae40-62aa84ebcf16', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:22 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-14%5Cca70d53f3997a47060011807bf470a6c523b02b7.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:22 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1712958', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"a4df4c09861f4c8cff39ebf12af519b6"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:45 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD7445F67F2', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:22 GMT'}
+2023-09-20 19:27:22 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:22 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:22 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:22 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91267_2023-09-13_e7f9b9675a18a739d6a31b806b57314a.pdf> referred in <None>
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 14),
+ 'edition_number': '2133',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91267_2023-09-13_e7f9b9675a18a739d6a31b806b57314a.pdf'],
+ 'files': [{'checksum': 'a4df4c09861f4c8cff39ebf12af519b6',
+            'path': '2700000\\2023-09-14\\ca70d53f3997a47060011807bf470a6c523b02b7.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91267_2023-09-13_e7f9b9675a18a739d6a31b806b57314a.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 22, 973873),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:23 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-12
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:23 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-14
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:23 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-13%5Cf0ac1854dd91d20abfeaa0c627ef54d1d54048f1.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-13%5Cf0ac1854dd91d20abfeaa0c627ef54d1d54048f1.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:23 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:23 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-13%5Cf0ac1854dd91d20abfeaa0c627ef54d1d54048f1.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222723Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:23 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222723Z
+20230920/us-east-1/s3/aws4_request
+94221ace4b5a86730deabad86f22de40e1925fc5b5c2110429f53770c8ef4181
+2023-09-20 19:27:23 [botocore.auth] DEBUG: Signature:
+6d0b0084627d4487c8767ffa8d816a079a33cd3768c31619b3a8b251127c56f6
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:23 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-13%5Cf0ac1854dd91d20abfeaa0c627ef54d1d54048f1.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222723Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=6d0b0084627d4487c8767ffa8d816a079a33cd3768c31619b3a8b251127c56f6', 'amz-sdk-invocation-id': b'1af638f6-5eb9-4064-bebe-0fdf151ee2a4', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:23 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-13%5Cf0ac1854dd91d20abfeaa0c627ef54d1d54048f1.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:23 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '2142220', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"84bcb5a447e5d63b55412c35d1f548e4"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:47 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD752CADDA2', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:23 GMT'}
+2023-09-20 19:27:23 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:23 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91266_2023-09-12_8dd9f8fda950b85fe80fcb52729d6631.pdf> referred in <None>
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 13),
+ 'edition_number': '2132',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91266_2023-09-12_8dd9f8fda950b85fe80fcb52729d6631.pdf'],
+ 'files': [{'checksum': '84bcb5a447e5d63b55412c35d1f548e4',
+            'path': '2700000\\2023-09-13\\f0ac1854dd91d20abfeaa0c627ef54d1d54048f1.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91266_2023-09-12_8dd9f8fda950b85fe80fcb52729d6631.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 23, 209391),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:23 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-10
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:23 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-12%5Cf1ea3a01ecfc8240c02c372fca95b9ee654a3f5b.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-12%5Cf1ea3a01ecfc8240c02c372fca95b9ee654a3f5b.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:23 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:23 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-12%5Cf1ea3a01ecfc8240c02c372fca95b9ee654a3f5b.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222723Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:23 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222723Z
+20230920/us-east-1/s3/aws4_request
+e24a16c7e63bc92aa75eaed1b60bf7ed73fcdc333a336ed51c542ad99c198d6f
+2023-09-20 19:27:23 [botocore.auth] DEBUG: Signature:
+39de9bd355bb805cb80c46ac968028b5ecfd2e888f381a7a5a83a8c30803f636
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:23 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-12%5Cf1ea3a01ecfc8240c02c372fca95b9ee654a3f5b.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222723Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=39de9bd355bb805cb80c46ac968028b5ecfd2e888f381a7a5a83a8c30803f636', 'amz-sdk-invocation-id': b'c8327931-5595-476f-bf81-c2cf53c1e5f2', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:23 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-12%5Cf1ea3a01ecfc8240c02c372fca95b9ee654a3f5b.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:23 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1310795', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"8124bb1cc93ff2448be520929d58930e"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:47 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD764BACBC4', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:23 GMT'}
+2023-09-20 19:27:23 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:23 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91265_2023-09-11_95454f6b3708f84a13f53a2a3822ab9d.pdf> referred in <None>
+2023-09-20 19:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 12),
+ 'edition_number': '2131',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91265_2023-09-11_95454f6b3708f84a13f53a2a3822ab9d.pdf'],
+ 'files': [{'checksum': '8124bb1cc93ff2448be520929d58930e',
+            'path': '2700000\\2023-09-12\\f1ea3a01ecfc8240c02c372fca95b9ee654a3f5b.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91265_2023-09-11_95454f6b3708f84a13f53a2a3822ab9d.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 23, 521366),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:23 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-11%5C7122d28b77b3edd5eac0edd0751227ab3e2b9d85.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-11%5C7122d28b77b3edd5eac0edd0751227ab3e2b9d85.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:23 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:23 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-11%5C7122d28b77b3edd5eac0edd0751227ab3e2b9d85.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222723Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:23 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222723Z
+20230920/us-east-1/s3/aws4_request
+a56880c13055b944237d3c7525d510e72dfd1094b2b2dd089afa8dce1f5fa653
+2023-09-20 19:27:23 [botocore.auth] DEBUG: Signature:
+c13393be3fdf2f65dd23e457f3bff1d7ed68ca04b713782b886af1e4b3a7d359
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:23 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-11%5C7122d28b77b3edd5eac0edd0751227ab3e2b9d85.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222723Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=c13393be3fdf2f65dd23e457f3bff1d7ed68ca04b713782b886af1e4b3a7d359', 'amz-sdk-invocation-id': b'4fa1cb04-4cd4-4bec-9252-b004ffa412a0', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:23 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-11%5C7122d28b77b3edd5eac0edd0751227ab3e2b9d85.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:23 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '734178', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"b80fa4498eda55701c1ca0f86affdbc0"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:46 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD77756652F', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:23 GMT'}
+2023-09-20 19:27:23 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:23 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:23 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:23 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91264_2023-09-08_4d130bfaf58a13d5613599801311961c.pdf> referred in <None>
+2023-09-20 19:27:23 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-11
+2023-09-20 19:27:23 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-09
+2023-09-20 19:27:23 [al_associacao_municipios] DEBUG: Regular Gazette not available for 2023-09-10
+2023-09-20 19:27:23 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 11),
+ 'edition_number': '2130',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91264_2023-09-08_4d130bfaf58a13d5613599801311961c.pdf'],
+ 'files': [{'checksum': 'b80fa4498eda55701c1ca0f86affdbc0',
+            'path': '2700000\\2023-09-11\\7122d28b77b3edd5eac0edd0751227ab3e2b9d85.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91264_2023-09-08_4d130bfaf58a13d5613599801311961c.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 23, 829468),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:24 [al_associacao_municipios] DEBUG: Regular Gazette not available for 2023-09-09
+2023-09-20 19:27:24 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-07
+2023-09-20 19:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:24 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-08
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:24 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-08%5C6c69d36dd2b8b7b28889fc7a73e502482f238b40.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-08%5C6c69d36dd2b8b7b28889fc7a73e502482f238b40.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:24 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:24 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-08%5C6c69d36dd2b8b7b28889fc7a73e502482f238b40.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222724Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:24 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222724Z
+20230920/us-east-1/s3/aws4_request
+50294e1a20d381859f97ae1ff9086884d3956a34400c68ad70a1283c54543983
+2023-09-20 19:27:24 [botocore.auth] DEBUG: Signature:
+c5718b6bb6427c1a42ea6bdfd04f6580fe45c169605f605e79dd0ba50a556d08
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:24 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-08%5C6c69d36dd2b8b7b28889fc7a73e502482f238b40.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222724Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=c5718b6bb6427c1a42ea6bdfd04f6580fe45c169605f605e79dd0ba50a556d08', 'amz-sdk-invocation-id': b'0a6af54c-c0ef-47e7-9542-31eef53df282', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:24 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-08%5C6c69d36dd2b8b7b28889fc7a73e502482f238b40.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:24 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1283578', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"5bf0538a20951ddd33c9ee25f15e6b3e"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:47 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD795AE2691', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:24 GMT'}
+2023-09-20 19:27:24 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:24 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:24 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91263_2023-09-06_0e718e7efac19c5069b77b577a364e85.pdf> referred in <None>
+2023-09-20 19:27:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 8),
+ 'edition_number': '2129',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91263_2023-09-06_0e718e7efac19c5069b77b577a364e85.pdf'],
+ 'files': [{'checksum': '5bf0538a20951ddd33c9ee25f15e6b3e',
+            'path': '2700000\\2023-09-08\\6c69d36dd2b8b7b28889fc7a73e502482f238b40.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91263_2023-09-06_0e718e7efac19c5069b77b577a364e85.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 24, 343737),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:24 [al_associacao_municipios] DEBUG: Regular Gazette not available for 2023-09-07
+2023-09-20 19:27:24 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-06
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:24 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-06%5C200489b1933e1ad15edd6905310fbdfd07f92368.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-06%5C200489b1933e1ad15edd6905310fbdfd07f92368.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:24 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:24 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-06%5C200489b1933e1ad15edd6905310fbdfd07f92368.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222724Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:24 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222724Z
+20230920/us-east-1/s3/aws4_request
+388bea9244101380c4d764a1012bae7f06527ad24f93d8669fd48fc02b573fab
+2023-09-20 19:27:24 [botocore.auth] DEBUG: Signature:
+5f49274e5ea00908f790fffc59e574ea86a66d0c8101516281cb6c2c13f67c6e
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:24 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-06%5C200489b1933e1ad15edd6905310fbdfd07f92368.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222724Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=5f49274e5ea00908f790fffc59e574ea86a66d0c8101516281cb6c2c13f67c6e', 'amz-sdk-invocation-id': b'6dc29b7b-ce49-4c5b-9fce-4c917ff0064f', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:24 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-06%5C200489b1933e1ad15edd6905310fbdfd07f92368.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:24 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1371000', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"5bc0e98be9286204337279b97a9b6352"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:49 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD7B2C23D19', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:24 GMT'}
+2023-09-20 19:27:24 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:24 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:24 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:24 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91262_2023-09-05_e04d86d71f80a3eca0d32e4aa0fa6aff.pdf> referred in <None>
+2023-09-20 19:27:24 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:24 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 6),
+ 'edition_number': '2128',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91262_2023-09-05_e04d86d71f80a3eca0d32e4aa0fa6aff.pdf'],
+ 'files': [{'checksum': '5bc0e98be9286204337279b97a9b6352',
+            'path': '2700000\\2023-09-06\\200489b1933e1ad15edd6905310fbdfd07f92368.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91262_2023-09-05_e04d86d71f80a3eca0d32e4aa0fa6aff.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 24, 828613),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:25 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-05%5C6d004fe96c18a799a1af6513190b3e3e29093ddf.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-05%5C6d004fe96c18a799a1af6513190b3e3e29093ddf.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:25 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:25 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-05%5C6d004fe96c18a799a1af6513190b3e3e29093ddf.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222725Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:25 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222725Z
+20230920/us-east-1/s3/aws4_request
+1b6bcf12cae15b5e445c5b0c61012c249a6afaca5d4f8e75c6d633da1ad8ed8b
+2023-09-20 19:27:25 [botocore.auth] DEBUG: Signature:
+62a609f7d85bbbc6fba1d83f79a6e31ef7694157ca859b2163f7c226186f1121
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:25 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-05%5C6d004fe96c18a799a1af6513190b3e3e29093ddf.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222725Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=62a609f7d85bbbc6fba1d83f79a6e31ef7694157ca859b2163f7c226186f1121', 'amz-sdk-invocation-id': b'4a9b4344-3280-4620-b536-e1e6012fa027', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:25 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-05%5C6d004fe96c18a799a1af6513190b3e3e29093ddf.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:25 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1853978', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"dbd3ac7db5b4b074d03885150f5a6ba3"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:50 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD7BEBB923A', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:25 GMT'}
+2023-09-20 19:27:25 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:25 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:25 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91261_2023-09-04_38397c42df141d97c712ef8e8e94be2e.pdf> referred in <None>
+2023-09-20 19:27:25 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 5),
+ 'edition_number': '2127',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91261_2023-09-04_38397c42df141d97c712ef8e8e94be2e.pdf'],
+ 'files': [{'checksum': 'dbd3ac7db5b4b074d03885150f5a6ba3',
+            'path': '2700000\\2023-09-05\\6d004fe96c18a799a1af6513190b3e3e29093ddf.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91261_2023-09-04_38397c42df141d97c712ef8e8e94be2e.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 25, 29667),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:25 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-04
+2023-09-20 19:27:25 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario/extra> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:25 [scrapy.core.engine] DEBUG: Crawled (200) <POST https://www.diariomunicipal.com.br/ama/materia/calendario> (referer: https://www.diariomunicipal.com.br/ama/)
+2023-09-20 19:27:25 [al_associacao_municipios] DEBUG: Extra Gazette not available for 2023-09-05
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x000001CD05FBA9E0>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x000001CD05FBA950>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_cache of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <bound method S3ArnParamHandler.handle_arn of <botocore.utils.S3ArnParamHandler object at 0x000001CD0676E590>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x000001CD05FBA7A0>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x000001CD05FBACB0>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <bound method S3RegionRedirector.set_request_url of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x000001CD05FBA440>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x000001CD05FDC040>
+2023-09-20 19:27:25 [botocore.endpoint] DEBUG: Making request for OperationModel(name=HeadObject) with params: {'url_path': '/queridodiariobucket/2700000%5C2023-09-04%5C67195b5bee4ce8cc8121c56a27d7894a71d173f5.pdf', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Botocore/1.27.89 Python/3.10.10 Windows/10'}, 'body': b'', 'url': 'http://localhost:9000/queridodiariobucket/2700000%5C2023-09-04%5C67195b5bee4ce8cc8121c56a27d7894a71d173f5.pdf', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x000001CD0676DAE0>, 'has_streaming_input': False, 'auth_type': None, 'signing': {'bucket': 'queridodiariobucket'}}}
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x000001CD0676D990>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_signer of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x000001CD0600FA00>>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x000001CD05FBA680>
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event before-sign.s3.HeadObject: calling handler <bound method S3EndpointSetter.set_endpoint of <botocore.utils.S3EndpointSetter object at 0x000001CD0676E6B0>>
+2023-09-20 19:27:25 [botocore.auth] DEBUG: Calculating signature using v4 auth.
+2023-09-20 19:27:25 [botocore.auth] DEBUG: CanonicalRequest:
+HEAD
+/queridodiariobucket/2700000%5C2023-09-04%5C67195b5bee4ce8cc8121c56a27d7894a71d173f5.pdf
+
+host:localhost:9000
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20230920T222725Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2023-09-20 19:27:25 [botocore.auth] DEBUG: StringToSign:
+AWS4-HMAC-SHA256
+20230920T222725Z
+20230920/us-east-1/s3/aws4_request
+dfeccafdaa6dfd2e1241bf18445d7844ec8b169d081d7d794480981ba618ea64
+2023-09-20 19:27:25 [botocore.auth] DEBUG: Signature:
+158e00d8d68f2ac73d89fb5e96c7a2ab2f041963f945c2381604a83f0adff8e8
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x000001CD05FDC700>
+2023-09-20 19:27:25 [botocore.endpoint] DEBUG: Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=http://localhost:9000/queridodiariobucket/2700000%5C2023-09-04%5C67195b5bee4ce8cc8121c56a27d7894a71d173f5.pdf, headers={'User-Agent': b'Botocore/1.27.89 Python/3.10.10 Windows/10', 'X-Amz-Date': b'20230920T222725Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=minio-access-key/20230920/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=158e00d8d68f2ac73d89fb5e96c7a2ab2f041963f945c2381604a83f0adff8e8', 'amz-sdk-invocation-id': b'39c8c794-ed74-465b-b6f1-3add36d5265b', 'amz-sdk-request': b'attempt=1'}>
+2023-09-20 19:27:25 [urllib3.connectionpool] DEBUG: http://localhost:9000 "HEAD /queridodiariobucket/2700000%5C2023-09-04%5C67195b5bee4ce8cc8121c56a27d7894a71d173f5.pdf HTTP/1.1" 200 0
+2023-09-20 19:27:25 [botocore.parsers] DEBUG: Response headers: {'Accept-Ranges': 'bytes', 'Cache-Control': 'max-age=172800', 'Content-Length': '1251121', 'Content-Security-Policy': 'block-all-mixed-content', 'Content-Type': 'binary/octet-stream', 'ETag': '"719159141d6ddc83d66b48049a4809bf"', 'Last-Modified': 'Wed, 20 Sep 2023 22:23:49 GMT', 'Server': 'MinIO', 'Vary': 'Origin', 'X-Amz-Request-Id': '1786BBD7DBB38309', 'X-Xss-Protection': '1; mode=block', 'Date': 'Wed, 20 Sep 2023 22:27:25 GMT'}
+2023-09-20 19:27:25 [botocore.parsers] DEBUG: Response body:
+b''
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x000001CD0676E500>
+2023-09-20 19:27:25 [botocore.retryhandler] DEBUG: No retry needed.
+2023-09-20 19:27:25 [botocore.hooks] DEBUG: Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirector.redirect_from_error of <botocore.utils.S3RegionRedirector object at 0x000001CD0676E5C0>>
+2023-09-20 19:27:25 [scrapy.pipelines.files] DEBUG: File (uptodate): Downloaded file from <GET https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91260_2023-09-01_3aafc912f1b9e40d7c853b4824eefe88.pdf> referred in <None>
+2023-09-20 19:27:25 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.diariomunicipal.com.br/ama/materia/calendario>
+{'date': datetime.date(2023, 9, 4),
+ 'edition_number': '2126',
+ 'file_urls': ['https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91260_2023-09-01_3aafc912f1b9e40d7c853b4824eefe88.pdf'],
+ 'files': [{'checksum': '719159141d6ddc83d66b48049a4809bf',
+            'path': '2700000\\2023-09-04\\67195b5bee4ce8cc8121c56a27d7894a71d173f5.pdf',
+            'status': 'uptodate',
+            'url': 'https://www-storage.voxtecnologia.com.br?m=sigpub.publicacao&f=9878&i=publicado_91260_2023-09-01_3aafc912f1b9e40d7c853b4824eefe88.pdf'}],
+ 'is_extra_edition': False,
+ 'power': 'executive_legislative',
+ 'scraped_at': datetime.datetime(2023, 9, 20, 22, 27, 25, 512427),
+ 'territory_id': '2700000'}
+2023-09-20 19:27:25 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] ------------------------------ MONITORS ------------------------------
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] Comparison Between Executions/Days without gazettes... OK
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] Requests/Items Ratio/Ratio of requests over items scraped count... OK
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] Error Count Monitor/test_stat_monitor... SKIPPED (Unable to find 'log_count/ERROR' in job stats.)
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] Finish Reason Monitor/Should have the expected finished reason(s)... OK
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] Item Validation Monitor/test_stat_monitor... SKIPPED (Unable to find 'spidermon/validation/fields/errors' in job stats.)
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] ----------------------------------------------------------------------
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] 5 monitors in 0.031s
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] OK (skipped=2)
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] -------------------------- FINISHED ACTIONS --------------------------
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] ----------------------------------------------------------------------
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] 0 actions in 0.000s
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] OK
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] --------------------------- PASSED ACTIONS ---------------------------
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] ----------------------------------------------------------------------
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] 0 actions in 0.000s
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] OK
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] --------------------------- FAILED ACTIONS ---------------------------
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] ----------------------------------------------------------------------
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] 1 action in 0.000s
+2023-09-20 19:27:25 [al_associacao_municipios] INFO: [Spidermon] OK (skipped=1)
+2023-09-20 19:27:25 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 23803,
+ 'downloader/request_count': 43,
+ 'downloader/request_method_count/GET': 3,
+ 'downloader/request_method_count/POST': 40,
+ 'downloader/response_bytes': 79949,
+ 'downloader/response_count': 43,
+ 'downloader/response_status_count/200': 41,
+ 'downloader/response_status_count/301': 2,
+ 'elapsed_time_seconds': 8.958526,
+ 'file_count': 13,
+ 'file_status_count/uptodate': 13,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 9, 20, 22, 27, 25, 638473),
+ 'httpcompression/response_bytes': 54804,
+ 'httpcompression/response_count': 41,
+ 'item_scraped_count': 13,
+ 'log_count/DEBUG': 474,
+ 'log_count/INFO': 33,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 1,
+ 'response_received_count': 41,
+ 'scheduler/dequeued': 43,
+ 'scheduler/dequeued/memory': 43,
+ 'scheduler/enqueued': 43,
+ 'scheduler/enqueued/memory': 43,
+ 'start_time': datetime.datetime(2023, 9, 20, 22, 27, 16, 679947)}
+2023-09-20 19:27:25 [scrapy.core.engine] INFO: Spider closed (finished)
