@@ -1,0 +1,88 @@
+import datetime
+import scrapy
+
+from gazette.items import Gazette
+from gazette.spiders.base import BaseGazetteSpider
+
+
+# Definição da classe do raspador
+class GoAnapolisSpider(BaseGazetteSpider):
+    # Parâmetros iniciais
+    name = "go_anapolis"
+    TERRITORY_ID = "5201108"
+    start_date = datetime.date(2010, 5, 31)
+    allowed_domains = ["https://dom.anapolis.go.gov.br/"]
+    start_urls = [
+        "https://dom.anapolis.go.gov.br/",
+        "https://dom22.anapolis.go.gov.br/",
+    ]
+
+    # <div class="DayPicker-Week" role="row"><div class="DayPicker-Day" tabindex="-1" role="gridcell" aria-label="Sun Oct 11 2020" aria-disabled="false" aria-selected="false">11</div><div class="DayPicker-Day" tabindex="-1" role="gridcell" aria-label="Mon Oct 12 2020" aria-disabled="false" aria-selected="false">12</div><div class="DayPicker-Day DayPicker-Day--hasDiario" tabindex="-1" role="gridcell" aria-label="Tue Oct 13 2020" aria-disabled="false" aria-selected="false">13</div><div class="DayPicker-Day DayPicker-Day--hasDiario" tabindex="-1" role="gridcell" aria-label="Wed Oct 14 2020" aria-disabled="false" aria-selected="false">14</div><div class="DayPicker-Day DayPicker-Day--hasDiario DayPicker-Day--selected" tabindex="-1" role="gridcell" aria-label="Thu Oct 15 2020" aria-disabled="false" aria-selected="true">15</div><div class="DayPicker-Day DayPicker-Day--hasDiario" tabindex="-1" role="gridcell" aria-label="Fri Oct 16 2020" aria-disabled="false" aria-selected="false">16</div><div class="DayPicker-Day" tabindex="-1" role="gridcell" aria-label="Sat Oct 17 2020" aria-disabled="false" aria-selected="false">17</div></div>
+    # <iframe src="https://diariooficial.s3.us-east-2.amazonaws.com/cliente/pf_anapolis/legacy/DIARIO-OFICIAL-1679045517909.pdf" class="styles__Frame-sc-pcytxg-7 dDqSKV"></iframe>
+    ## outros anos: <li class="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1f7cqn"><div class="MuiListItemAvatar-root css-a5kqs7"><div class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault css-1qhnayv"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="FilePresentIcon"><path d="M15 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V7l-5-5zM6 20V4h8v4h4v12H6zm10-10v5c0 2.21-1.79 4-4 4s-4-1.79-4-4V8.5c0-1.47 1.26-2.64 2.76-2.49 1.3.13 2.24 1.32 2.24 2.63V15h-2V8.5c0-.28-.22-.5-.5-.5s-.5.22-.5.5V15c0 1.1.9 2 2 2s2-.9 2-2v-5h2z"></path></svg></div></div><div class="MuiListItemText-root MuiListItemText-multiline css-1xar93x"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-yb0lig">Edição 1</span><p class="MuiTypography-root MuiTypography-body2 MuiListItemText-secondary css-mbfek">Seg, 31 de maio 2010</p></div></li>
+    # O parse abaixo irá partir da start_url acima
+    def parse(self, response):
+        # Nosso seletor cria uma lista com os código HTML onde os anos estão localizados
+        years = response.css("div.col-md-1")
+        # E fazer um loop para extrair de fato o ano
+        for year in years:
+            # Para cada item da lista (year) vamos pegar (get) um seletor XPath.
+            # Também dizemos que queremos o resultado como um número inteiro (int)
+            year_to_scrape = int(year.xpath("./a/font/text()").get())
+
+            # Para não fazer requisições desnecessárias, se o ano já for o da página
+            # inicial (página inicial é o ano atual) ou então for anterior ao ano da
+            # data inicial da busca, não iremos fazer a requisição
+            if (
+                year_to_scrape < self.start_date.year
+                or year_to_scrape == datetime.date.today().year
+            ):
+                continue
+
+            # Com Scrapy é possível utilizar regex direto no elemento com os métodos
+            # `.re` e `.re_first` (na maioria das vezes é suficiente e não precisamos
+            # usar métodos da biblioteca `re`)
+            event_target = year.xpath("./a/@href").re_first(r"(ctl00.*?)',")
+
+            # O método `.from_response` nesse caso é bem útil pois pega vários
+            # elementos do tipo <input> que já estão dentro do elemento <form>
+            # localizado na página e preenche eles automaticamente no formdata, assim
+            # é possível economizar muitas linhas de código
+            yield scrapy.FormRequest.from_response(
+                response,
+                formdata={"__EVENTTARGET": event_target},
+                callback=self.parse_year,
+            )
+
+        # O `yield from` permite fazermos `yield` em cada resultado do método gerador
+        # `self.parse_year`, assim, aqui estamos dando `yield` em todos os itens
+        # `Gazette` raspados da página inicial
+        yield from self.parse_year(response)
+
+    def parse_year(self, response):
+        editions = response.xpath(
+            "//div[@class='container body-content']//div[@class='row']//a[contains(@href, 'AbreSemanario')]"
+        )
+
+        for edition in editions:
+            document_href = edition.xpath("./@href").get()
+
+            title = edition.xpath("./text()")
+
+            gazette_date = datetime.datetime.strptime(
+                title.re_first(r"\d{2}/\d{2}/\d{4}"), "%d/%m/%Y"
+            ).date()
+            edition_number = title.re_first(r"- (\d+) -")
+            is_extra_edition = "extra" in title.get().lower()
+
+            # Esse site "esconde" o link direto do PDF por trás de uma série de
+            # redirecionamentos, porém, como nas configurações do projeto é permitido
+            # que arquivos baixados sofram redirecionamento, é possível colocar o link
+            # "falso" já no item `Gazette` e o projeto vai conseguir baixar o documento
+            yield Gazette(
+                date=gazette_date,
+                edition_number=edition_number,
+                file_urls=[response.urljoin(document_href)],
+                is_extra_edition=is_extra_edition,
+                power="executive",
+            )
