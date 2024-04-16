@@ -17,6 +17,8 @@ USER_AGENT = (
     "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:108.0) Gecko/20100101 Firefox/108.0"
 )
 
+TEMPLATES_DIR = "templates"
+
 DOWNLOAD_TIMEOUT = 360
 
 FILES_STORE = config("FILES_STORE", default="s3://queridodiariobucket/")
@@ -58,3 +60,5 @@ FILES_STORE_S3_ACL = config("FILES_STORE_S3_ACL", default="public-read")
 
 DOWNLOADER_MIDDLEWARES = {"scrapy_zyte_smartproxy.ZyteSmartProxyMiddleware": 610}
 ZYTE_SMARTPROXY_APIKEY = "<SMARTPROXY_APIKEY>"
+
+COMMANDS_MODULE = "gazette.commands"
